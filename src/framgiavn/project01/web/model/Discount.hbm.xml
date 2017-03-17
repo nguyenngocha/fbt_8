@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="framgiavn.project01.web.model.Discount" table="Discount">
+    <id name="id">
+      <generator class="assigned"></generator>
+    </id>
+          
+    <property name="type" type="integer"></property>
+    <property name="value" type="integer"></property>
+    <property name="targetId" type="integer" column="target_id"></property>
+    <property name="targetType" type="string" column="target_type"></property>
+    <property name="startDate" type="date" column="target_date"></property>
+    <property name="endDate" type="date" column="end_date"></property>
+    <property name="status" type="integer"></property>
+  </class>
+</hibernate-mapping>

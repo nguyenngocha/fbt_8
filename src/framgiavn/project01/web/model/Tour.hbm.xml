@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="framgiavn.project01.web.model.Tour" table="Tour">
+    <id name="id">
+      <generator class="assigned"></generator>
+    </id>
+    <property name="name"></property>
+    <property name="startDate" type="date" column="start_date"></property>
+    <property name="finishDate" type="date" column="finish_date"></property>
+    <many-to-one name="tourMasterId" class="framgiavn.project01.web.model.TourMaster"
+      column="tour_master_id" not-null="true" />
+  </class>
+</hibernate-mapping>
